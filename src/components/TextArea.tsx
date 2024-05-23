@@ -22,7 +22,7 @@ const TextArea: FC<TextareaProps> = ({
   };
 
   return (
-    <div className="mb-3">
+    <div className="mb-3 flex justify-center">
       <textarea
         rows={5}
         id={name}

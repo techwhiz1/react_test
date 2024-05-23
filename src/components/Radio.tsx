@@ -21,7 +21,7 @@ const RadioButton: FC<RadioButtonProps> = ({
   const { label, value } = option;
 
   return (
-    <div className="flex items-center mb-2">
+    <div className="flex items-center mb-2 justify-center">
       <input
         type="radio"
         id={label}

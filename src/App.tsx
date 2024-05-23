@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { radioValue, commentValue } from "./reducers/home.ts";
+import { radioData, commentData } from "./reducers/dashboard.ts";
 
 import Input from "./components/Input";
 import TextArea from './components/TextArea';
-import CodeButton from "./components/CodeButton";
+import CodeButton from "./components/Button.tsx";
 import Radio from './components/Radio.tsx';
 
 const options = [
@@ -25,11 +25,11 @@ const App = () => {
 
   const handleChangeRadio = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedValue(+event.target.value);
-    dispatch(radioValue(+event.target.value));
+    dispatch(radioData(+event.target.value));
   };
 
   const handleChangeTextArea = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    dispatch(commentValue(event.target.value));
+    dispatch(commentData(event.target.value));
   };
 
   const codeClick = (value: string) => {
@@ -42,7 +42,7 @@ const App = () => {
 
       <div>
         <div className="mb-4">
-          <span className="mb-4 block">Select option</span>
+          <span className="mb-4 block text-center">Select option</span>
           {options.map((option) => (
             <Radio
               option={option}

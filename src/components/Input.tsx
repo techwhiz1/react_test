@@ -28,13 +28,15 @@ const Input: FC<InputProps> = ({ placeholder, value, flag }) => {
 
   return (
     <div className="mb-4">
-      <input
-        type="text"
-        value={discountCode}
-        onChange={handleChange}
-        placeholder={placeholder}
-        className="w-60 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block p-2.5"
-      />
+      <div className="flex justify-center">
+        <input
+          type="text"
+          value={discountCode}
+          onChange={handleChange}
+          placeholder={placeholder}
+          className="w-60 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block p-2.5"
+        />
+      </div>
 
       {showError && (
         <span className="text-xs text-red-500">

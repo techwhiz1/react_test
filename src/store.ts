@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import componentsReducer from "./reducers/home";
+import componentsReducer from "./reducers/dashboard";
 
 export default configureStore({
   reducer: {
